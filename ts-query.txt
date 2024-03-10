@@ -1,0 +1,8 @@
+(expression_statement
+  (call_expression function:
+    (identifier) @func-callee)
+    (#eq? @func-callee <replace>))
+
+((field_identifier) @f_ident
+(#eq? @f_ident "setB"))
+

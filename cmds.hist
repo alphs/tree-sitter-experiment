@@ -1,0 +1,4 @@
+sed -e "s/<replace>/$(python3 setup.py | tail -n1 | tr '"' "'")/" ts-query.txt > gen-ts-query.txt
+tree-sitter query gen-ts-query.txt example.cpp
+sed -e "7 d" example.cpp
+sed -e "15 s/\.setB()//" example.cpp
